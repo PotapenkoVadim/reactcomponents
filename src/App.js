@@ -4,6 +4,7 @@ import { HoverPicWidget } from './hoverpic/HoverPicWidget';
 import { NeonCheckboxWidget } from './neoncheckbox/NeonCheckboxWidget';
 import { SearchWidget } from './searchwidget/SearchWidget';
 import { RadioButton } from './radiobutton/RadioButton';
+import { Modal } from './modal/Modal';
 // import { ScrollbarWidget } from './scrollbar/ScrollbarWidget';
 
 export class App extends React.Component {
@@ -12,6 +13,25 @@ export class App extends React.Component {
 			<>
 				<DisplayWidget title='Search Widget'>
 					<SearchWidget />
+				</DisplayWidget>
+
+				<DisplayWidget title='Modal Widget'>
+					<Modal
+						triggerTitle='Modal trigger'
+						closable={ true }
+						buttonBlock={ true }
+
+						successButtonTitle='Success Button'
+						successHandler={ () => console.log('Success Click!') }
+
+						cancelType='danger'
+						cancelButtonTitle='Cancel Button'
+						cancelHanlder={ () => console.log('Cancel Click!') }
+					>
+						<h3 className='text-center'>Modal Title</h3>
+						<p>Hello world! Lorem Ipsum Here! Hi everyone this is modal app.</p>
+						<p>Trololo!!!</p>
+					</Modal>
 				</DisplayWidget>
 
 				<DisplayWidget title='Widget Neon Checkbox'>
