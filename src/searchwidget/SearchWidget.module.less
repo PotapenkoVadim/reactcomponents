@@ -1,0 +1,46 @@
+@size: 50px;
+.search {
+	display: flex;
+	background: linear-gradient(45deg, #333, #5a5454);
+	height: @size;
+	border-radius: @size;
+	padding: 5px;
+
+	&:hover {
+		input {
+			width: 250px;
+			padding: 0 10px;
+		}
+
+		button {
+			background-color: #e6e6e6;
+		}
+	}
+
+	input {
+		border: none;
+		background: none;
+		outline: none;
+		padding: 0;
+		font-size: 18px;
+		color: #fff;
+		width: 0;
+		transition: .4s;
+	}
+
+	button {
+		color: #00b7ff;
+		width: @size;
+		height: @size;
+		border-radius: 50%;
+		border: none;
+		background-color: #333;
+		font-size: 20px;
+		cursor: pointer;
+		transition: .4s;
+
+		&:focus, &:active {
+			outline : none;
+		}
+	}
+}
